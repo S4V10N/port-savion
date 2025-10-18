@@ -49,7 +49,8 @@ header {
     max-width: 144rem;
     justify-content: space-between;
     padding: 1rem 3rem;
-    background-color: var(--header-bg);
+    backdrop-filter: blur(10rem);
+    background-image: linear-gradient(to right,var(--header-bg), var(--box-bg));
     border-radius: 2rem;
     height: 9rem;
     overflow: hidden;
@@ -270,9 +271,8 @@ main {
     color: var(--projects-text);
 }
 .projects__deploy {
-    width: 50%;
     overflow: hidden;
-    max-width: 35rem;
+    max-width: 25rem;
     border-top: 1px solid var(--text);
     border-left: 1px solid var(--text);
     background-color: var(--box-bg);
@@ -288,7 +288,7 @@ main {
     border-radius: 0.5rem;
     overflow: hidden;
     height: 14rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .projects__deploy div:hover img{
     width: 110%;
@@ -304,13 +304,14 @@ main {
     text-decoration: none;
     font-weight: bold;
     transition: 1s ease-in-out;
+    font-size: 2rem;
     font-family: var(--header);
     letter-spacing: 0.2em;
-    color: var(--main-text);
+    color: var(--projects-accent);
 }
 .projects__deploy button a:hover,
 .projects__deploy button a:active {
-    color: var(--projects-accent);
+    color: var(--projects-text);
 }
 .projects {
     margin-bottom: 3rem;
@@ -381,7 +382,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
-    transform: translateY(2rem);
+    transform: translateY(6rem);
 }
 .socials img {
     width: 4.5rem;
@@ -393,4 +394,30 @@ footer {
 }
 main img {
     width: 6rem;
+}
+.projects__expand {
+    display: none;
+    transition: 1s ease-in-out;
+}
+#projects h3 {
+    text-align: center;
+    border-bottom: 2px solid var(--projects-text);
+    margin-bottom: 2rem;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+#projects h3:hover,
+#projects h3:active {
+        border-bottom: 2px solid var(--projects-accent);
+        transform: translateY(-0.5rem);
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+.view {
+    display: flex;
+    flex-direction: column;
 }

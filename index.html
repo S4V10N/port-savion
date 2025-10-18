@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/styles.css">
+    <script src="app.js" defer></script>
     <title>home</title>
 </head>
 <body>
@@ -99,7 +100,8 @@
             <div class="first-child">
                 <p>Here are some of my recent projects — a few examples of the sites and interfaces I’ve built.</p>
             </div>
-            <section class="projects">
+            <section class="view">
+                            <section class="projects">
                 <div class="projects__desc">
                 <h2>Weather App</h2>
                 <p>A responsive weather app that lets users search any location and view detailed forecasts by days and hours. It also includes unit conversion for weather data</p>
@@ -110,7 +112,7 @@
                 <button><a href="">Visit</a></button>
             </div>
             </section>
-            <section class="projects">
+            <section class="projects even">
                 <div class="projects__desc">
                 <h2>Age Calculator</h2>
                 <p>A sleek tool that calculates a user's age with precision and includes built-in exception handling to manage invalid inputs gracefully.</p>
@@ -132,8 +134,7 @@
                 <button><a href="">Visit</a></button>
             </div>
             </section>
-                <h3>see more</h3>
-            <section class="projects">
+            <section class="projects even">
                 <div class="projects__desc">
                 <h2>Newsletter Sign-up Page</h2>
                 <p>A minimal yet engaging sign-up form with a responsive layout, input validation, and a success page that confirms submissions.</p>
@@ -144,7 +145,8 @@
                 <button><a href="">Visit</a></button>
             </div>
             </section>
-                <h3>see more</h3>
+            </section>
+                <h3 id="expand">see more</h3>
             <div class="projects__expand">
                 <section class="projects">
                     <div class="projects__desc">
@@ -190,6 +192,7 @@
                     <button><a href="">Visit</a></button>
                 </div>
                 </section>
+                <h3 id="shrink">see less</h3>
             </div>
         </section>
         <section id="contact">
