@@ -16,25 +16,27 @@
                 <div></div>
                 <div></div>
             </div>
-            <div class="hamburger__menu">
-                <a href="#">home</a>
-                <a href="#about">about</a>
-                <a href="#projects">projects</a>
-                <a href="#contact">contact</a>
-                <div>
-                    <img src="assets/icons/Vector.svg" alt="github-logo">
-                    <img src="assets/icons/Social Icons.svg" alt="linkedin-logo">
-                </div>
-            </div>
             <div class="nav__links">
                 <ul>
                     <li><a href="#">home</a></li>
-                    <li><a href="#about">about</a></li>
+                    <li><a href="#bio">about</a></li>
                     <li><a href="#projects">projects</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </div>
         </nav>
+            <div class="hamburger__menu">
+                <div>
+                    <a href="#">home</a>
+                    <a href="#bio">about</a>
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
+                </div>
+                <div>
+                    <img src="assets/icons/Vector.svg" alt="github-logo">
+                    <img src="assets/icons/Social Icons.svg" alt="linkedin-logo">
+                </div>
+            </div>
     </header>
     <main>
         <section id="home">
@@ -42,7 +44,7 @@
             <h1>Hello, I’m Savion</h1>
             <p>a front-end developer with a passion for building clean, functional, and visually engaging digital experiences.</p>
             </div>
-            <img src="assets/img/Line 1.svg" alt="arrow-with-gradient" class="hero-line">
+            <img src="assets/img/Line 1.svg" alt="arrow-with-gradient" class="hero-line" id="bio">
             <div class="hero-img">
                 <img src="assets/img/small-celestial-fog.svg" alt="small-celestial-fog">
                 <img src="assets/img/moon art.svg" alt="moon-pattern">
@@ -149,7 +151,7 @@
             </div>
             </section>
             <section class="projects even">
-                <div class="projects__desc">
+                <div class="projects__desc" id="position">
                 <h2>Newsletter Sign-up Page</h2>
                 <p>A minimal yet engaging sign-up form with a responsive layout, input validation, and a success page that confirms submissions.</p>
             </div>
@@ -160,7 +162,7 @@
             </div>
             </section>
             </section>
-                <h3 id="expand">see more</h3>
+                <h3 id="expand">see more <img src="assets/icons/angle-down.svg" alt="arrow"></h3>
             <div class="projects__expand">
                 <section class="projects">
                     <div class="projects__desc">
@@ -206,7 +208,7 @@
                     <button><a href="">Visit</a></button>
                 </div>
                 </section>
-                <h3 id="shrink">see less</h3>
+                <h3 id="shrink"><a href="#position">see less <img src="assets/icons/angle-down.svg" alt="arrow" class="flip"></a></h3>
             </div>
         </section>
         <section id="contact">
