@@ -361,32 +361,86 @@ main {
     margin-bottom: 4rem;
 }
 form {
-    width: 30rem;
-    color: var(--main-text);
+    width: 32rem;
     margin: 0 auto;
-    display: none;
-    border: 2px solid red;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: 1s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(10rem);
+}
+.height {
+    height: 100%;
 }
 .my-form {
     display: none;
 }
 form input {
-    width: 100%;
     height: 4rem;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-form textarea {
+    font-size: 1.8rem;
+    background-color: transparent;
     width: 100%;
-    border-radius: 0.5rem;
+    color: var(--main-text);
+}
+form input:focus,
+form textarea:focus {
+    outline: none;
 }
 form label {
+    font-weight: bold;
+    color: var(--hero-accent);
+    text-wrap: nowrap;
+    transition: 1s ease-in-out;
+    position: absolute;
+    top: 0;
+}
+.active {
+    transform: translateY(-2.5rem);
+}
+form textarea {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-height: 6rem;
+    background-color: transparent;
+    border: none;
+    color: var(--main-text);
+    line-height: 1.5em;
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 1rem;
+}
+fieldset {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--hero-accent);
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 3.5rem;
 }
 form input,
 form label,
 form button {
-    display: block;
     border: none;
+}
+button[type="submit"] {
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    color: #939aff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--box-bg);
+    font-size: 1.8rem;
+    transition: 1s ease-in-out;
+}
+button[type="submit"]:active,
+button[type="submit"]:hover {
+    color: var(--main-text);
+    background-color: var(--text);
 }
 .contact-img {
     width: 20rem;
@@ -418,6 +472,7 @@ form button {
 }
 #contact {
     position: relative;
+    height: calc(100% + 35rem);
     margin-bottom: 3rem;
 }
 .menu {
@@ -457,9 +512,12 @@ footer {
 main img {
     width: 6rem;
 }
-.projects__expand {
-    display: none;
+.accordion {
+    position: absolute;
+    height: 100%;
+    border: 2px solid red;
     transition: 1s ease-in-out;
+    overflow: hidden;
 }
 #projects h3 {
     text-align: center;
