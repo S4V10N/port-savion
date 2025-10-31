@@ -7,12 +7,7 @@ const hamburgerMenu = document.querySelector(".hamburger__menu");
 const hamburgerLinks = document.querySelectorAll(".hamburger__menu div a");
 const openForm = document.querySelector("#contact-form");
 const form = document.querySelector("#my-form");
-const input = document.querySelectorAll("input");
-const accordionItem = document.querySelectorAll(
-    ".accordion .projects__expand .projects"
-);
-console.log(accordionItem);
-const submitBtn = document.querySelector("#showbtn");
+const input = document.querySelectorAll(".input");
 const socials = document.querySelector(".socials");
 const successBtn = document.querySelector(".my-form");
 
@@ -65,10 +60,58 @@ function openFormBtn() {
 openForm.onclick = openFormBtn;
 
 seeMore.addEventListener("click", () => {
-    accordion.classList.add("hidden");
+    accordion.classList.add("expand");
     seeMore.classList.add("hidden");
+    seeLess.classList.remove("hidden");
 });
 seeLess.addEventListener("click", () => {
-    accordion.classList.remove("hidden");
+    accordion.classList.remove("expand");
     seeMore.classList.remove("hidden");
+    seeLess.classList.add("hidden");
 });
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            Accept: "application/json",
+        },
+    })
+        .then((response) => {
+            if (response.ok) {
+                status.innerHTML = "Thanks for your submission!";
+                form.reset();
+            } else {
+                response.json().then((data) => {
+                    if (Object.hasOwn(data, "errors")) {
+                        status.innerHTML = data["errors"]
+                            .map((error) => error["message"])
+                            .join(", ");
+                    } else {
+                        status.innerHTML =
+                            "Oops! There was a problem submitting your form";
+                    }
+                });
+            }
+        })
+        .catch(() => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+        });
+    for (let i = 0; i < input.length; i++) {
+        input[i].value = "";
+    }
+    form.classList.remove("height");
+    setTimeout(() => {
+        successBtn.classList.add("success");
+    }, 1000);
+    document
+        .querySelector(".my-form .closeBtn")
+        .addEventListener("click", () => {
+            successBtn.classList.remove("success");
+        });
+}
+form.addEventListener("submit", handleSubmit);

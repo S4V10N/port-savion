@@ -405,6 +405,9 @@ form {
     color: var(--about-accent);
     padding: 4rem 0;
 }
+.success {
+    display: flex;
+}
 .my-form img {
     width: 40%;
 }
@@ -552,8 +555,12 @@ main img {
     width: 6rem;
 }
 .accordion {
-    transition: 1s ease-in-out;
     overflow: hidden;
+    height: 0;
+}
+.expand {
+    height: 100%;
+    transition: 1s ease;
 }
 #projects h3 {
     text-align: center;
@@ -722,13 +729,6 @@ footer p {
         display: flex;
         justify-content: space-between;
         gap: 2rem;
-        margin-bottom: 6rem;
-    }
-    #shrink {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        margin-top: 2rem;
     }
     .projects__desc {
         height: 30rem;

@@ -414,15 +414,15 @@
                                 </button>
                             </div>
                         </section>
-                        <h3 id="shrink">
-                            see less
-                            <img
-                                src="assets/icons/angle-down.svg"
-                                alt="arrow"
-                                class="flip"
-                            />
-                        </h3>
                     </div>
+                    <h3 id="shrink">
+                        see less
+                        <img
+                            src="assets/icons/angle-down.svg"
+                            alt="arrow"
+                            class="flip"
+                        />
+                    </h3>
                 </section>
             </section>
             <section id="contact">
@@ -461,11 +461,23 @@
                 >
                     <fieldset>
                         <label for="name">Name :</label>
-                        <input type="text" name="name" id="name" required />
+                        <input
+                            class="input"
+                            type="text"
+                            name="name"
+                            id="name"
+                            required
+                        />
                     </fieldset>
                     <fieldset>
                         <label for="email">Email address :</label>
-                        <input type="email" name="email" id="email" required />
+                        <input
+                            class="input"
+                            type="email"
+                            name="email"
+                            id="email"
+                            required
+                        />
                     </fieldset>
                     <fieldset>
                         <label for="message" class="textbox-header">
@@ -475,6 +487,7 @@
                             name="message"
                             id="message"
                             rows="5"
+                            class="input"
                             required
                         ></textarea>
                     </fieldset>
