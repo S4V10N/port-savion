@@ -380,30 +380,9 @@ form {
     transform: translateX(-50%);
     z-index: 10;
 }
+
 .height {
     height: 100%;
-}
-.my-form .closeBtn {
-    width: 6rem;
-    position: absolute;
-    top: 0;
-    margin: 1.5rem 1.5rem 0 0;
-    right: 0;
-}
-.my-form {
-    width: 32rem;
-    background-color: var(--main-text);
-    backdrop-filter: blur(10px);
-    margin: 0 auto;
-    display: none;
-    flex-direction: column;
-    border-radius: 1rem;
-    align-items: center;
-    gap: 15rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--about-accent);
-    padding: 4rem 0;
 }
 .success {
     display: flex;
@@ -468,9 +447,24 @@ form label,
 form button {
     border: none;
 }
+.btn {
+    position: absolute;
+    width: max-content;
+    right: 0;
+    font-size: 1.8rem;
+    color: var(--hero-accent);
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 1rem;
+    display: none;
+    transform: translateY(-6rem);
+    bottom: 0;
+}
+.color {
+    color: var(--main-text);
+}
 button[type="submit"] {
     border: 0;
-    background-color: transparent;
     font-weight: bold;
     color: #939aff;
     padding: 1rem;
@@ -557,6 +551,18 @@ main img {
 .accordion {
     overflow: hidden;
     height: 0;
+}
+.grow {
+    animation: grow 1s ease-in-out;
+}
+@keyframes grow {
+    from {
+        height: fit-content;
+        overflow: hidden;
+    }
+    to {
+        height: 0;
+    }
 }
 .expand {
     height: 100%;

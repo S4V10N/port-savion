@@ -9,7 +9,7 @@ const openForm = document.querySelector("#contact-form");
 const form = document.querySelector("#my-form");
 const input = document.querySelectorAll(".input");
 const socials = document.querySelector(".socials");
-const successBtn = document.querySelector(".my-form");
+const statusBar = document.querySelector(".btn");
 
 function xBtn() {
     menuHand[0].classList.add("x-one");
@@ -54,7 +54,7 @@ function openFormBtn() {
         setTimeout(() => {
             socials.classList.remove("hidden");
         }, 900);
-        input;
+        statusBar.classList.remove("visible");
     }
 }
 openForm.onclick = openFormBtn;
@@ -66,6 +66,7 @@ seeMore.addEventListener("click", () => {
 });
 seeLess.addEventListener("click", () => {
     accordion.classList.remove("expand");
+    accordion.classList.add("grow");
     seeMore.classList.remove("hidden");
     seeLess.classList.add("hidden");
 });
@@ -104,14 +105,9 @@ async function handleSubmit(event) {
     for (let i = 0; i < input.length; i++) {
         input[i].value = "";
     }
-    form.classList.remove("height");
     setTimeout(() => {
-        successBtn.classList.add("success");
+        statusBar.classList.add("visible");
     }, 1000);
-    document
-        .querySelector(".my-form .closeBtn")
-        .addEventListener("click", () => {
-            successBtn.classList.remove("success");
-        });
+    document.querySelector("submit").style.color = "white";
 }
 form.addEventListener("submit", handleSubmit);
