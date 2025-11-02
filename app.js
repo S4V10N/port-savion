@@ -59,12 +59,14 @@ function openFormBtn() {
 }
 openForm.onclick = openFormBtn;
 
-seeMore.addEventListener("click", () => {
+seeMore.addEventListener("click", (e) => {
+    e.preventDefault();
     accordion.classList.add("expand");
     seeMore.classList.add("hidden");
     seeLess.classList.remove("hidden");
 });
-seeLess.addEventListener("click", () => {
+seeLess.addEventListener("click", (e) => {
+    e.preventDefault();
     accordion.classList.remove("expand");
     accordion.classList.add("grow");
     seeMore.classList.remove("hidden");
