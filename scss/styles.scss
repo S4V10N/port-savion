@@ -571,6 +571,9 @@ main img {
     width: 3rem;
     transform: translateY(1rem);
 }
+#shrink img {
+    transform: rotate(180deg) translateY(-1rem);
+}
 #shrink a {
     color: var(--main-text);
     text-decoration: none;
