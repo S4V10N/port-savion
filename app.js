@@ -1,6 +1,4 @@
-const seeMore = document.querySelector("#expand");
 const seeLess = document.querySelector("#shrink");
-const accordion = document.querySelector(".accordion");
 const menu = document.querySelector(".hamburger");
 const menuHand = document.querySelectorAll(".hamburger div");
 const hamburgerMenu = document.querySelector(".hamburger__menu");
@@ -58,20 +56,6 @@ function openFormBtn() {
     }
 }
 openForm.onclick = openFormBtn;
-
-seeMore.addEventListener("click", (e) => {
-    e.preventDefault();
-    accordion.classList.add("expand");
-    seeMore.classList.add("hidden");
-    seeLess.classList.remove("hidden");
-});
-seeLess.addEventListener("click", (e) => {
-    e.preventDefault();
-    accordion.classList.remove("expand");
-    accordion.classList.add("grow");
-    seeMore.classList.remove("hidden");
-    seeLess.classList.add("hidden");
-});
 
 async function handleSubmit(event) {
     event.preventDefault();
