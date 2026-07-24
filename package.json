@@ -1,29 +1,35 @@
 {
-  "name": "port-savion",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "savion",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/S4V10N/port-savion.git"
+  "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "lucide-react": "^1.21.0",
+    "next": "16.2.9",
+    "next-themes": "^0.4.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.82.0",
+    "react-icons": "^5.6.0",
+    "resend": "^6.18.0",
+    "three": "^0.184.0",
+    "zod": "^4.4.3"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/S4V10N/port-savion/issues"
-  },
-  "homepage": "https://github.com/S4V10N/port-savion#readme",
   "devDependencies": {
-    "@eslint/css": "^0.13.0",
-    "@eslint/js": "^9.38.0",
-    "@eslint/json": "^0.13.2",
-    "@eslint/markdown": "^7.5.0",
-    "eslint": "^9.38.0",
-    "globals": "^16.4.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.184.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
